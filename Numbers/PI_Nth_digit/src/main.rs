@@ -17,7 +17,14 @@ fn main() {
     .parse()
     .expect("Input was not an intger");
 
-    println!("{:.1$}", pi, digit)
+    if digit < 49{
+        println!("{:.1$}", pi, digit);
+    }
+    else{
+        println!("Your number is too large. Please pick a number less than or equal to 48");
+    }
+
+
 
 
 
