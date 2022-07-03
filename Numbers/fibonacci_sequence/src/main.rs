@@ -7,6 +7,7 @@ fn main() {
 
     let mut correct_input = false;
     let mut user_n = 0;
+    let mut n = 0;
 
     while correct_input == false {
         println!("Which number would like the Fibonacci Sequence to?");
@@ -24,9 +25,10 @@ fn main() {
             Err(_) => continue,
         };
         user_n = user_nl;
+        n = user_n;
         correct_input = true;
     }
-    while user_n != 0  {
+    while n != 0  {
 
         if user_n == 0 {
             break;
@@ -43,7 +45,7 @@ fn main() {
 
             if f == 0 {
                 print!("{} {}", f2, f1);
-                user_n = user_n - 2;
+                n = n - 2;
             }
 
             f = f2 + f1;
@@ -52,12 +54,12 @@ fn main() {
             f1 = f;
             f2 = temp;
 
-            user_n = user_n - 1;
+            n = n - 1;
 
         }
     }
 
     println!("");
-    print!("Done!");
+    print!("Done! The Fibonacci Sequence to {} places", user_n);
 
 }
