@@ -1,11 +1,11 @@
 use std::{io};
 fn main() {
-    let my_number = fastrand::u16(..);
+    let my_number = fastrand::u16(1..1000);
     let mut correct = false;
     let mut user_number: u16;
 
     while correct == false {
-        println!("Guess my number (0-65535)");
+        println!("Guess my number (1-1000)");
 
         let mut user_guess = String::new();
 
@@ -23,14 +23,14 @@ fn main() {
 
         }
         else if user_number < my_number{
-            println!("Your guess is lower than my number");
+            println!("Too low");
 
         }
         else if user_number > my_number{
-            println!("Your guess is higher than my number");
+            println!("Too high");
 
         }
-        
+
     }
     println!("You Win!");
 
