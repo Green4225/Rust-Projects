@@ -28,18 +28,35 @@ fn main() {
     }
     while user_n != 0  {
 
-        if f == 0 {
+        if user_n == 0 {
+            break;
+        }
+        else if user_n == 1 {
+            print!("{}", f2);
+            break;
+        }
+        else if user_n == 2 {
             print!("{} {}", f2, f1);
-            user_n = user_n - 2;
+            break;
+        }
+        else{
+
+            if f == 0 {
+                print!("{} {}", f2, f1);
+                user_n = user_n - 2;
+            }
+
+            f = f2 + f1;
+            print!(" {}", f);
+            temp = f1;
+            f1 = f;
+            f2 = temp;
+
+            user_n = user_n - 1;
+
         }
 
-        f = f2 + f1;
-        print!(" {}", f);
-        temp = f1;
-        f1 = f;
-        f2 = temp;
 
-        user_n = user_n - 1;
 
     }
 
