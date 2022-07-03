@@ -55,11 +55,9 @@ fn main() {
             user_n = user_n - 1;
 
         }
-
-
-
     }
 
-
+    println!("");
+    print!("Done!");
 
 }
