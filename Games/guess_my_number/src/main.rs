@@ -13,10 +13,12 @@ fn main() {
         .read_line(&mut user_guess)
         .expect("Failed to read input");
 
-        user_number = user_guess
-        .trim()
-        .parse()
-        .expect("Your input was not an intger");
+        user_number = match user_guess
+                .trim()
+                .parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
 
         if user_number == my_number {
             correct = true;
