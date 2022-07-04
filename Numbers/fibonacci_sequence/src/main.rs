@@ -1,12 +1,12 @@
 use std::{io};
 fn main() {
-    let mut f = 0;
+    let mut f: u32 = 0;
     let mut f1 = 1;
     let mut f2 = 0;
     let mut temp;
 
     let mut correct_input = false;
-    let mut user_n = 0;
+    let mut user_n: u32 = 0;
     let mut n = 0;
 
     while correct_input == false {
@@ -18,7 +18,7 @@ fn main() {
         .read_line(&mut user_input)
         .expect("Failed to read input");
 
-        let user_nl:i32 = match user_input
+        let user_nl:u32 = match user_input
                 .trim()
                 .parse() {
             Ok(num) => num,
